@@ -2,7 +2,7 @@
 	<div id="index">
 		<div class="welcome_wrap">
 			<div class="welcome">
-				<h1>Hello! Welcome to FCWorld ERP Preview.</h1>
+				<h1>Hello! Welcome to Office Workspace Tools.</h1>
 				<nuxt-link tag="a" class="link" to="/office/workspace">Enter</nuxt-link>
 			</div>
 		</div>
