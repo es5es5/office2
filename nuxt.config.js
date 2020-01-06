@@ -2,6 +2,16 @@
 export default {
   // mode: 'universal',
   mode: 'spa',
+  /**
+   * Custom config by Louis.
+   */
+  router: {
+    linkActiveClass: 'active',
+  },
+  transition: {
+    name: 'page',
+    mode: 'out-in'
+  },
   /*
   ** Headers of the page
   */
@@ -24,6 +34,8 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/scss/cmm.scss',
+    '~/assets/scss/reset.scss'
   ],
   /*
   ** Plugins to load before mounting the App

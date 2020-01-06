@@ -1,17 +1,12 @@
 <template>
 	<div class="workspace_list_layout">
-		<WorkspaceList></WorkspaceList>
+		<nuxt-link tag="a" class="link" to="/office/create">go Create</nuxt-link>
 	</div>
 </template>
 
 <script>
-import WorkspaceList from '@/templates/office/WorkspaceList'
-
 export default {
-	name: 'WorkspaceListLayout',
-	components: {
-		WorkspaceList
-	}
+	name: 'WorkspaceListLayout'
 }
 </script>
 
