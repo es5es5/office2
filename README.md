@@ -1,6 +1,6 @@
 # Office 2
 
-> Office Workspace Tools.
+> Office Workspace Tools. (Using Nuxt.js!)
 
 ## Build Setup
 
