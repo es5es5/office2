@@ -12,6 +12,11 @@ export default {
     name: 'page',
     mode: 'out-in'
   },
+  generate: {
+    routes: [
+      '/1'
+    ]
+  },
   /*
   ** Headers of the page
   */
@@ -41,6 +46,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins'
   ],
   /*
   ** Nuxt.js dev-modules
