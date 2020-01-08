@@ -40,7 +40,8 @@ export default {
   */
   css: [
     '~/assets/scss/cmm.scss',
-    '~/assets/scss/reset.scss'
+    '~/assets/scss/reset.scss',
+    '~/assets/scss/draggable.scss'
   ],
   /*
   ** Plugins to load before mounting the App

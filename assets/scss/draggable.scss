@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+// draggable
+.draggable {
+	cursor: pointer;
+
+	&:hover {
+		opacity: .75;
+	}
+}
+
+.dragOver {
+	background-color: green;
+}

@@ -1,5 +1,15 @@
 <template>
-	<div class="seat" :class="{ 'draggable' : _isDraggable }" :draggable="_isDraggable">
+	<div class="seat"
+		:draggable="_isDraggable"
+		:class="[
+			{ 'draggable' : _isDraggable },
+			{ 'dragOver' : isDragOver },
+		]"
+		@dragstart="dragStart"
+		@dragend="dragEnd"
+		@dragover="dragOver"
+		@drop="drop"
+	>
 		<p class="seatTitle">{{ 'title' }}</p>
 	</div>
 </template>
@@ -9,7 +19,11 @@ import MixinDraggable from '../MixinDraggable'
 
 export default {
 	name: 'Seat',
-	mixins: [ MixinDraggable ]
+	mixins: [ MixinDraggable ],
+	data() {
+		return {
+		}
+	},
 }
 </script>
 

@@ -69,12 +69,3 @@ body { overflow: visible; }
 .text--bold { font-weight: 600; }
 .text--right { text-align: right; }
 .text--left { text-align: left; }
-
-// draggable
-.draggable {
-	cursor: pointer;
-
-	&:hover {
-		opacity: .5;
-	}
-}
