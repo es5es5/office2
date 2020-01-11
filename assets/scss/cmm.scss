@@ -56,6 +56,20 @@ body { overflow: visible; }
   }
 }
 
+@mixin grab {
+	cursor: move; /* fallback if grab cursor is unsupported */
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+
+	/* (Optional) Apply a "closed-hand" cursor during drag operation. */
+	&:active {
+		cursor: grabbing;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+	}
+}
+
 .sub_title {
   display: inline-block;
   margin: 4px 4px 14px 4px;
