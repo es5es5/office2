@@ -10,6 +10,11 @@
 	}
 }
 
+.dragging {
+	@include grabbing;
+}
+
 .dragOver {
+	@include grabbing;
 	background-color: green;
 }

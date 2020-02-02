@@ -10,7 +10,7 @@
 		@dragover="dragOver"
 		@drop="drop"
 	>
-		<p class="seatTitle">{{ 'title' }}</p>
+		<p class="seatTitle">{{ 'SEAT' }}</p>
 	</div>
 </template>
 
@@ -30,9 +30,11 @@ export default {
 <style lang="scss" scoped>
 .seat {
 	position: relative;
+	display: inline-block;
 	width: 4rem;
 	height: 4rem;
-	background-color: red;
+	margin: .25rem;
+	background-color: aquamarine;
 }
 
 .seatTitle {

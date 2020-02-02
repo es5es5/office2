@@ -58,16 +58,22 @@ body { overflow: visible; }
 
 @mixin grab {
 	cursor: move; /* fallback if grab cursor is unsupported */
-	cursor: grab;
-	cursor: -moz-grab;
 	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
 
 	/* (Optional) Apply a "closed-hand" cursor during drag operation. */
 	&:active {
-		cursor: grabbing;
-		cursor: -moz-grabbing;
 		cursor: -webkit-grabbing;
+		cursor: -moz-grabbing;
+		cursor: grabbing;
 	}
+}
+
+@mixin grabbing {
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+	cursor: grabbing;
 }
 
 .sub_title {
