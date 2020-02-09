@@ -1,5 +1,6 @@
 <template>
 	<div class="seat"
+		:id="_id"
 		:draggable="_isDraggable"
 		:class="[
 			{ 'draggable' : _isDraggable },
@@ -20,6 +21,18 @@ import MixinDraggable from '../MixinDraggable'
 export default {
 	name: 'Seat',
 	mixins: [ MixinDraggable ],
+	props: {
+		id: {
+			type: String,
+			required: true,
+			default: () => ''
+		}
+	},
+	computed: {
+		_id () {
+			return this.id
+		}
+	},
 	data() {
 		return {
 		}

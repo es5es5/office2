@@ -1,7 +1,7 @@
 <template>
 	<div class="simple_zone">
 		<div class="dropZone"
-			@dragover.prevent="onDragOver"
+			@dragover="onDragOver"
 			@drop="onDrop"
 			>
 			<p class="zoneName">Drop Zone</p>
@@ -13,15 +13,29 @@
 export default {
 	name: 'SimpleZone',
 	methods: {
-		onDragOver (ev) {
-			ev.preventDefault()
+		onDragOver (event) {
+			event.preventDefault()
 			// console.log('Zone DragOver', ev)
 		},
-		onDrop (ev) {
-			if (ev) {
-				ev.preventDefault()
-				// console.log('Zone Dropped', ev)
-			}
+		onDrop (event) {
+			event.preventDefault()
+			const id = event.dataTransfer.getData('text')
+			console.log('event', event.dataTransfer)
+			console.log('id', id)
+
+			const draggableElement = document.getElementById(id)
+			// const draggableElement = document.createElement('p') // is a node
+			// draggableElement.innerHTML = 'test satu dua tiga'
+			const dropzone = event.target
+
+
+			console.log('dropzone', dropzone)
+			console.log('draggableElement', draggableElement)
+			dropzone.appendChild(draggableElement)
+
+			event
+				.dataTransfer
+				.clearData()
 		}
 	}
 }

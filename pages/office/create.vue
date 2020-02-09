@@ -1,6 +1,6 @@
 <template>
 	<div class="office_create">
-		<Seat v-for="(item, index) in 3" :key="index">
+		<Seat :id="COMMON.UUID()" v-for="index in 5" :key="index">
 		</Seat>
 		<SimpleZone></SimpleZone>
 	</div>

@@ -22,8 +22,9 @@ export default {
 		}
 	},
 	methods: {
-		dragStart (e) {
-			console.info('=== dragStart ===', e.target)
+		dragStart (event) {
+			event.dataTransfer.setData('text', event.target.id)
+			console.info('=== dragStart ===', event.target)
 		},
 		dragEnd (e) {
 			console.info('=== dragEnd ===', e.target)
