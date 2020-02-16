@@ -3,6 +3,7 @@
 		<div class="dropZone"
 			@dragover="onDragOver"
 			@drop="onDrop"
+			:style="`background-color: ${_color};`"
 			>
 			<p class="zoneName">Drop Zone</p>
 		</div>
@@ -12,6 +13,18 @@
 <script>
 export default {
 	name: 'SimpleZone',
+	props: {
+		color: {
+			type: String,
+			required: false,
+			default: () => 'lightblue'
+		}
+	},
+	computed: {
+		_color () {
+			return this.color
+		}
+	},
 	methods: {
 		onDragOver (event) {
 			event.preventDefault()
@@ -46,6 +59,5 @@ export default {
 	width: 40rem;
 	height: 40rem;
 	padding: 1rem;
-	background-color: lightblue;
 }
 </style>

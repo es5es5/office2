@@ -6,6 +6,7 @@
 			{ 'draggable' : _isDraggable },
 			{ 'dragOver' : isDragOver },
 		]"
+		:style="`background-color: ${_color};`"
 		@dragstart="dragStart"
 		@dragend="dragEnd"
 		@dragover="dragOver"
@@ -26,11 +27,19 @@ export default {
 			type: String,
 			required: true,
 			default: () => ''
+		},
+		color: {
+			type: String,
+			required: false,
+			default: () => 'aquamarine'
 		}
 	},
 	computed: {
 		_id () {
 			return this.id
+		},
+		_color () {
+			return this.color
 		}
 	},
 	data() {
@@ -47,7 +56,6 @@ export default {
 	width: 4rem;
 	height: 4rem;
 	margin: .25rem;
-	background-color: aquamarine;
 }
 
 .seatTitle {
