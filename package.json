@@ -30,7 +30,7 @@
     "eslint-plugin-nuxt": ">=0.4.2",
     "jest": "^24.9.0",
     "jest-vue-preprocessor": "^1.7.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.4.0",
     "sass-loader": "^8.0.0",
